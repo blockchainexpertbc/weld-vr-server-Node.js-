@@ -27,7 +27,7 @@ const server = http.createServer(app);
 // const db = require('./app/db/db.connect');
 // const io = require('./app/socket')(server);
 
-const port = 6430;
+const port = 8000;
 server.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
