@@ -20,7 +20,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.get("/", function(req, res) {
+  //when we get an http get request to the root/homepage
+  res.send("Hello World");
+});
    /* bodyParser.urlencoded() is deprecated */
 require('./app/routes')(app)
 const server = http.createServer(app);
